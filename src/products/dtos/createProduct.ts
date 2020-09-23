@@ -1,4 +1,6 @@
-export class CreateProductDto {
+import { Document } from 'mongoose';
+
+export class CreateProductDto extends Document {
     readonly idProduct: string;
     readonly nameProduct: string;
     readonly category: string;
