@@ -8,7 +8,7 @@
 $ git clone
 $ npm install
 ```
-## Update .env PORT and MONGO_URI at root level with your own credentiales
+## Update .env PORT and MONGO_URI at root level with your own credentials
 ```bash
 PORT=YOUR_PORT
 MONGO_URI=YOUR_MONGO_ATLAS_URI
