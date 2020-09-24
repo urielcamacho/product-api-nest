@@ -12,9 +12,15 @@ export class ProductsController {
     constructor(private readonly productService: ProductService) {}
 
     /* Returns a list with all products */
-    @Get()
-    getAllProducts(): Promise<IProduct[]> {
-        return this.productService.getAllProducts();
+    @Get(':per_page/:page')
+    getAllProducts(@Param('per_page') perPage: string, @Param('page') page: string): Promise<any> {
+        return this.productService.getAllProducts(perPage, page);
+    }
+
+    /* Returns a product */
+    @Get(':id')
+    getProducts(@Param('id') id: string): Promise<IProduct> {
+        return this.productService.getProduct(id);
     }
 
     /* Create a new product */
